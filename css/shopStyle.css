@@ -1,0 +1,466 @@
+@font-face {
+	font-family: sofia;
+	src: url(../fonts/Sofia\ Pro\ Regular\ Az.woff);
+}
+
+html {
+	width: 100%;
+}
+
+.menu-items {
+	display: none;
+}
+
+.big {
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body > i {
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 20px;
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-size: 14px;
+	font-family: sofia;
+	display: grid;
+}
+
+.container {
+	margin: 0px 15px;
+}
+.nav-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 62px;
+}
+
+.navbar .menu-items {
+	display: flex;
+}
+
+.navbar .nav-container li {
+	list-style: none;
+}
+
+.navbar .nav-container a {
+	text-decoration: none;
+	color: #0e2431;
+	font-weight: 500;
+	font-size: 1.2rem;
+	padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover {
+	font-weight: bolder;
+}
+
+.nav-container {
+	display: block;
+	height: 60px;
+}
+
+.checkbox {
+	position: absolute;
+	display: block;
+	height: 32px;
+	width: 32px;
+	top: 14px;
+	left: 3%;
+	z-index: 5;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.navbar .menu-items {
+	background-color: white;
+	padding-top: 70px;
+	height: 300px;
+	transform: translate(-150%);
+	display: flex;
+	flex-direction: column;
+	margin-left: -40px;
+	padding-left: 50px;
+	transition: transform 0.5s ease-in-out;
+	text-align: center;
+}
+
+.navbar .menu-items li {
+	z-index: 10;
+	margin-bottom: 1.2rem;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+input[type="checkbox"]:checked ~ .menu-items {
+	list-style-type: none;
+	display: block;
+}
+
+input[type="checkbox"]:checked ~ .menu-items li {
+	flex-direction: row;
+	flex-wrap: wrap;
+	display: flex;
+	width: 100%;
+	font-size: 20px;
+	padding-top: 20px;
+}
+
+input[type="checkbox"]:checked ~ .menu-items li span {
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+input[type="checkbox"]:checked ~ .menu-items li:last-of-type {
+	padding-bottom: 20px;
+}
+
+input[type="checkbox"]:checked ~ .menu-items form input {
+	margin-top: 10px;
+	border: 1px solid gray;
+	border-right: 0px;
+	padding: 10px;
+	width: 90%;
+}
+
+input[type="checkbox"]:checked ~ .menu-items form button {
+	margin-top: 10px;
+	position: absolute;
+	right: 3%;
+	padding: 10px;
+	border: 1px solid gray;
+	border-left: 0px;
+	background-color: white;
+	width: 9%;
+}
+
+main > img:nth-of-type(1) {
+	position: static;
+	z-index: -1;
+	aspect-ratio: 1 / 1;
+	height: auto;
+	width: calc(100% + 30px);
+	position: relative;
+	left: -15px;
+	margin-bottom: 10px;
+}
+
+main > .grid {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+main > .grid > section:first-of-type {
+	gap: 5px;
+	display: flex;
+	width: 100%;
+	flex: 1;
+}
+
+main > .grid > section:first-of-type img {
+	min-width: 10%;
+	filter: opacity(60%);
+	aspect-ratio: 1 / 1;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+main > .grid > section:first-of-type img:nth-child(3) {
+	filter: none;
+}
+
+main > .grid > form {
+	margin-bottom: 20px;
+	display: grid;
+	height: 60px;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+main .grid > form > input:first-of-type {
+	text-align: center;
+	width: 95%;
+	border-radius: 0px;
+	border: 2px solid lightgrey;
+	grid-column: 1 / 2;
+}
+
+main .grid > form > input:last-of-type {
+	justify-self: end;
+	float: right;
+	background-color: rgb(235, 183, 63);
+	color: white;
+	width: 95%;
+	border-radius: 0px;
+	border: 0px;
+	grid-column: 2 / 4;
+}
+
+h2 {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+h1 {
+	margin-bottom: 20px;
+	font-size: 22px;
+}
+
+.grid > p,
+.container > p {
+	margin-bottom: 20px;
+}
+
+.grid > p:last-of-type {
+	margin-bottom: 50px;
+}
+
+.grid > section:nth-child(9) a {
+	margin-right: 25px;
+}
+
+.grid > section:nth-child(9) i {
+	margin-bottom: 20px;
+	margin-right: 5px;
+}
+
+.grid > section:nth-child(9) svg {
+	position: relative;
+	left: -260px;
+	bottom: -10px;
+}
+
+.grid section span {
+	margin-bottom: 5px;
+	display: inline-block;
+	color: grey;
+}
+
+.grid section span:last-of-type {
+	margin-bottom: 25px;
+}
+
+.grid section:nth-of-type(3) p {
+	display: inline-block;
+}
+
+.grid section:nth-child(11) {
+	gap: 10px 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	margin-bottom: 20px;
+}
+
+.grid section:nth-child(11) a:first-child {
+	text-decoration: solid underline 1px;
+	text-underline-offset: 3px;
+}
+
+.grid section:nth-child(11) a:not(:first-child) {
+	color: gray;
+}
+
+main .grid li {
+	margin-left: 14px;
+	margin-right: 14px;
+	padding-left: 5px;
+	margin-bottom: 5px;
+}
+
+.grid li::marker {
+	color: gray;
+}
+
+.grid li:last-of-type {
+	margin-bottom: 20px;
+}
+
+.grid ol {
+	list-style: decimal;
+}
+
+h2:last-of-type {
+	margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1450px) {
+	.small {
+		display: none;
+	}
+	.big {
+	}
+	input[type="checkbox"]:checked ~ .menu-items {
+		display: none;
+	}
+
+	main {
+		padding-top: 90px;
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	main > .grid {
+		margin-bottom: 50px;
+		display: grid;
+		column-gap: 50px;
+		grid-template-rows: repeat(8, fit-content(200px));
+	}
+
+	main > .grid > section:first-of-type {
+		height: 700px;
+		width: 90px;
+		gap: 20px;
+		flex-direction: column;
+		grid-column: 1/2;
+		grid-row: 1/9;
+	}
+
+	main > .grid > section:first-of-type > img {
+		margin: 0px;
+	}
+
+	main > .grid > img:first-of-type {
+		margin: 0px;
+		width: 700px;
+		grid-row: 1/9;
+		grid-column: 2/3;
+		height: auto;
+	}
+	main > .grid > p:first-of-type {
+		height: fit-content;
+		grid-column: 3/4;
+		grid-row: 1/2;
+	}
+	main > .grid > p:nth-of-type(2) {
+		margin-right: 0px;
+		margin-left: auto;
+		grid-column: 3/4;
+		grid-row: 1/2;
+	}
+
+	main > .grid > h2:first-of-type {
+		margin-bottom: 0px;
+		grid-row: 2/3;
+	}
+
+	main > .grid > p:nth-of-type(3) {
+		margin-bottom: 10px;
+	}
+
+	main > .grid > form:first-of-type {
+		display: flex;
+		flex-direction: row;
+	}
+
+	main > .grid > form > input[type="number"] {
+		margin-right: 20px;
+		width: 20%;
+	}
+
+	main > .grid > form > input[type="submit"] {
+		justify-self: start;
+		width: 60%;
+		margin: 0px;
+	}
+
+	main > .grid > section:nth-of-type(4) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: start;
+		align-content: flex-start;
+	}
+
+	main > .grid > section:nth-of-type(4) p {
+		width: 100%;
+	}
+
+	main > .grid > section:nth-of-type(4) > a:first-child {
+		text-decoration: none;
+	}
+
+	main > .grid > section:nth-of-type(4) > a[class="big"] {
+		margin-left: auto;
+		margin-right: 0px;
+	}
+
+	main > section > .flex {
+		gap: 30px;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex: 1;
+	}
+
+	main > section > h2:last-of-type {
+		margin-bottom: 30px;
+		font-weight: bold;
+	}
+
+	main > section > h2 span {
+		font-weight: lighter;
+	}
+
+	.flex > figure {
+		width: 25%;
+		height: auto;
+	}
+
+	figure img {
+		margin-bottom: 10px;
+		width: 100%;
+		height: auto;
+	}
+
+	figure figcaption span {
+		color: lightgray;
+	}
+
+	figcaption span i {
+		margin-left: 80%;
+	}
+
+	figcaption p {
+		padding-top: 10px;
+		margin-bottom: 45px;
+	}
+
+	del {
+		color: gray;
+	}
+
+	ins {
+		padding-left: 10px;
+		text-decoration: none;
+		color: darkred;
+	}
+
+	hr {
+		left: 0px;
+		width: 100%;
+		height: 2px;
+		background-color: lightgray;
+		border: 0px;
+	}
+
+	.flex > section:nth-of-type(3) {
+		width: 28%;
+	}
+
+	.flex > section:nth-of-type(3) p {
+		margin-bottom: 10px;
+	}
+}
