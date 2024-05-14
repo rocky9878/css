@@ -278,7 +278,7 @@ main > section {
 	margin-bottom: 100px;
 	background-color: var(--backColor);
 	overflow: hidden;
-	margin-top: 90px;
+	margin-top: 60px;
 	display: grid;
 	grid-template-rows: 600px 600px;
 	max-height: 600px;
